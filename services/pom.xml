@@ -11,5 +11,18 @@
 
     <artifactId>services</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.fin.app</groupId>
+            <artifactId>shared</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fin.app</groupId>
+            <artifactId>dao</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.google.dagger</groupId>
+            <artifactId>dagger</artifactId>
+        </dependency>
+    </dependencies>
 </project>
