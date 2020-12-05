@@ -103,16 +103,7 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.7.0</version>
-                    <configuration>
-                        <annotationProcessorPaths>
-                            <path>
-                                <groupId>com.google.dagger</groupId>
-                                <artifactId>dagger-compile</artifactId>
-                                <version>${dagger.version}</version>
-                            </path>
-                        </annotationProcessorPaths>
-                    </configuration>
+                    <version>3.6.1</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -128,11 +119,11 @@
                         <filters>
                             <filter>
                                 <artifact>*:*</artifact>
-                                <exludes>
+                                <excludes>
                                     <exclude>META-INF/*.SF</exclude>
                                     <exclude>META-INF/*.DSA</exclude>
                                     <exclude>META-INF/*.RSA</exclude>
-                                </exludes>
+                                </excludes>
                             </filter>
                         </filters>
                     </configuration>
@@ -154,8 +145,15 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>com.google.dagger</groupId>
+                            <artifactId>dagger-compiler</artifactId>
+                            <version>${dagger.version}</version>
+                        </path>
+                    </annotationProcessorPaths>
+                    <source>14</source>
+                    <target>14</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
